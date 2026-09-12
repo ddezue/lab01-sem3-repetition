@@ -13,15 +13,15 @@
       double sphereVolumeFactor = 4.0 / 3.0;
       double percentMultiplier = 100.0;
 
-      double cubeVolume = cubeEdge * cubeEdge * cubeEdge;
+      double cubeVolume = Math.Pow(cubeEdge, 3);
 
-      double ballVolume = sphereVolumeFactor * Math.PI * ballRadius * ballRadius * ballRadius;
+      double ballVolume = sphereVolumeFactor * Math.PI * Math.Pow(ballRadius, 3);
 
       double wastePercent = ((cubeVolume - ballVolume) / cubeVolume) * percentMultiplier;
 
-      Console.WriteLine("Cube volume: " + cubeVolume);
-      Console.WriteLine("Ball volume: " + ballVolume);
-      Console.WriteLine("Waste percent: " + wastePercent);
+      Console.WriteLine($"Cube volume: {cubeVolume}");
+      Console.WriteLine($"Ball volume: {ballVolume}");
+      Console.WriteLine($"Waste percent: {wastePercent}");
 
       Console.ReadKey();
     }
