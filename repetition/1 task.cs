@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GeometryTask
+﻿namespace GeometryTask
 {
   class Program
   {
